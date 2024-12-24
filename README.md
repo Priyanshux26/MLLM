@@ -1,7 +1,5 @@
 # MLLM
-Here is the complete `README.md` file with the instructions for using Google Drive to share the model file and setup instructions for your project. You can copy and paste this directly into your `README.md` file:
 
-```markdown
 # Intent and Slot Predictor
 
 ## Overview

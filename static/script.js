@@ -49,3 +49,21 @@ function enableSend() {
     const userMessage = document.getElementById("user-message").value;
     document.getElementById("send-btn").disabled = userMessage.trim() === "";
 }
+
+// Event Listeners
+document.addEventListener('DOMContentLoaded', () => {
+    // Get DOM elements
+    const chatForm = document.getElementById('chat-form');
+    const messageInput = document.getElementById('user-message');
+    
+    // Add event listeners
+    chatForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        sendMessage();
+    });
+    
+    messageInput.addEventListener('input', enableSend);
+    
+    // Display welcome message
+    displayMessage("welcome to intent and slot predictor. enter your query ", "bot");
+});

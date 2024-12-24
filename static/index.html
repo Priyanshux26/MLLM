@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intent and Slot Predictor</title>
-    <link rel="stylesheet" href="/static/styles.css">
-    <script src="/static/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intent and Slot Predictor</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <link rel="stylesheet" href="static/animations.css">
 </head>
 <body>
-    <div class="navbar">
-        <h1>Intent and Slot Predictor</h1>
+  <div class="container">
+    <div class="header">
+      <svg class="sparkle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+      </svg>
+      <h1>INTENT AND SLOT PREDICTOR</h1>
     </div>
-    
-    <div class="container">
-        <div class="chat-box" id="chat-box">
-            <!-- Chat messages will appear here -->
-        </div>
 
-        <div class="user-input">
-            <input type="text" id="user-message" placeholder="Type your message..." oninput="enableSend()">
-            <button id="send-btn" onclick="sendMessage()" disabled>Send</button>
-        </div>
-    </div>
+    <div id="chat-box" class="chat-box"></div>
+
+    <form id="chat-form" class="input-area">
+      <input 
+        type="text" 
+        id="user-message" 
+        placeholder="Type your message..."
+        autocomplete="off"
+      >
+      <button type="submit" id="send-btn" disabled>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m22 2-7 20-4-9-9-4Z"/>
+          <path d="M22 2 11 13"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <script type="module" src="static/script.js"></script>
 </body>
 </html>

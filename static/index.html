@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intent and Slot Predictor</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Intent and Slot Predictor</h1>
+    </div>
+    
+    <div class="container">
+        <div class="chat-box" id="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+
+        <div class="user-input">
+            <input type="text" id="user-message" placeholder="Type your message..." oninput="enableSend()">
+            <button id="send-btn" onclick="sendMessage()" disabled>Send</button>
+        </div>
+    </div>
+</body>
+</html>
